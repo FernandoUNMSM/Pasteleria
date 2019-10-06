@@ -1,16 +1,20 @@
+:root {
+    --naranja: #ffae00;
+    --plomo: #1f191b;
+}
 * {
     margin: 0;
     padding: 0;
+    font-family: "Montserrat", sans-serif;
 }
 *::selection {
-    background-color: #ffae00;
+    background-color: var(--naranja);
 }
-
 /*---------------------*/
 /* PRE-LOADER */
 /*---------------------*/
 
-/* .pre-loader {
+.pre-loader {
     height: 100vh;
     width: 100%;
     overflow: hidden;
@@ -20,10 +24,10 @@
     text-align: right;
 }
 .pre-loader .inferior, .pre-loader .superior {
-    background-color: #1f191b;
+    background-color: var(--plomo);
     position: relative;
     height: 50%;
-    animation-duration: 1.7s; 
+    animation-duration: 3s; 
 }
 
 .pre-loader .inferior {
@@ -50,7 +54,7 @@
     to {
         left: -100%;
     }
-} */
+}
 
 /*---------------------*/
 /* MENU */  
@@ -60,9 +64,10 @@
     height: fit-content;
     position: absolute;
     position: fixed;
-    background-color: #1f191b;
-    border-bottom: 4px solid #ffae00;
-    z-index: 100;
+    background-color: var(--plomo);
+    border-bottom: 4px solid var(--naranja);
+    z-index: 900;
+    user-select: none;
 }
 .menu-container {
     display: flex;
@@ -90,7 +95,7 @@
     font-size: 1.3em;
 }
 .menu-container .menu-item:hover .item-a{
-    color: #ffae00;
+    color: var(--naranja);
 }
 
 /*---------------------*/
@@ -135,12 +140,11 @@
     top: calc(50% - 3px);
     left: 10px;
     transform: rotate(45deg);
-    background-color: #ffae00;
+    background-color: var(--naranja);
 }
 .header-container .texto-header h2::before{
     right: 10px;
     left: initial;
-
 }
 .header-container .texto-header h1{
     font-size: 4em;
@@ -153,8 +157,7 @@
     width: max-content;
     margin: auto;
 }
-.header-container .texto-header .icono::before,
-.header-container .texto-header .icono::after{
+.header-container .texto-header .icono::before, .header-container .texto-header .icono::after{
     content: ' ';
     display: block;
     position: absolute;
@@ -168,14 +171,13 @@
 .header-container .texto-header .icono::after{
     left: 0;
 }
-
 .header-container .texto-header p{
     font-size: 1.7em;
 }
 .header-container .texto-header p span {
     text-transform: uppercase;
     font-weight: 700;
-    color: #ffae00;
+    color: var(--naranja);
 }
 
 /*---------------------*/
@@ -208,7 +210,7 @@
     font-weight: 300;
 }
 .historia-container .historia .titulo i{
-    color: #ffae00;
+    color: var(--naranja);
 }
 .historia-container .historia .text{
     color: gray;
@@ -225,7 +227,7 @@
 }
 .historia-container .historia button:hover {
     background-color: #000;
-    color: #ffae00;
+    color: var(--naranja);
 }
 
 /*---------------------*/
@@ -243,10 +245,11 @@
     align-items: center;
     font-family: "Montserrat", sans-serif;
     margin-bottom: 100px;
+    padding: 0 20px;
 }
 .separador .texto-container i{
     background-color: #000;
-    color: #ffae00;
+    color: var(--naranja);
     font-size: 2em;
     padding: 18px;
     margin-bottom: 10px;
@@ -262,7 +265,6 @@
     font-family: "Playfair Display", serif;
     font-size: 2em;
 }
-
 .separador .texto-container .texto > p:last-of-type{
     margin-bottom: 20px;
 }
@@ -286,9 +288,10 @@
     padding: 0 30px;
     margin: auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     font-family: "Montserrat", sans-serif;
+    margin-bottom: 100px;
 }
 .galeria-container .texto {
     width: 40%;
@@ -317,11 +320,11 @@
 }
 .galeria-container .texto button:hover {
     background-color: #000;
-    color: #ffae00;
+    color: var(--naranja);
 }
 .galeria-container .texto button:hover::after{
     background-color: #000;
-    color: #ffae00;
+    color: var(--naranja);
 }
 .galeria-container .texto h1 {
     font-size: 1.6em;
@@ -336,6 +339,13 @@
 .galeria-container .galeria {
     display: flex;
     flex-direction: column;
+    width: 40%;
+}
+.galeria-container .galeria div figure{
+    width: 200px;
+}
+.galeria-container .galeria div figure img{
+    width: 100%;
 }
 .galeria-container .galeria .inferior, .galeria-container .galeria .superior {
     display: flex;
@@ -347,6 +357,90 @@
     margin-bottom: 20px;
 }
 
+/*---------------------*/
+/* Mapa */
+/*---------------------*/
+
+.mapa-container {
+    line-height: 0;
+    position: relative;
+    text-align: center;
+}
+.mapa-container .info-container {
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.7);
+    display: flex;
+    transition: .4s ease all;
+}
+.mapa-container .info-container .sombra {
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+.mapa-container .info-container .caja {
+    line-height: 1.5;
+    background-color: #000;
+    padding: 50px 25px;
+    margin-bottom: 90px;
+    transition: .4s ease all;
+    margin-right: 30px;
+    margin-left: 30px;
+}
+.mapa-container .info-container .sombra .caja {
+    color: white;
+}
+.mapa-container .info-container .sombra .caja h1{
+    font-weight: 400;
+    width: 60%;
+    text-transform: uppercase;
+    margin: auto;
+    color: var(--naranja);
+    padding: 10px 20px;
+    border-bottom: 2px dotted #fff;
+    margin-bottom: 20px;
+}
+.mapa-container .info-container .sombra .caja p:first-of-type{
+    margin-bottom: 10px;
+}
+.mapa-container .info-container .sombra button{
+    border: 2px solid var(--naranja);
+    background-color: transparent;
+    color: white;
+    height: 40px;
+    width: 250px;
+    font-size: .9em;
+    font-weight: 200;
+    cursor: pointer;
+    transition: .4s ease all;
+    outline: none;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.mapa-container .info-container .sombra button:hover{
+    color: var(--naranja);
+}
+/* Mapa visible*/
+.mapa-container .info-0 {
+    height: 0;
+    line-height: 0;
+}
+.mapa-container .info-container .info-0 {
+    line-height: 0;
+    height: 0;
+    transform: translateY(-180%);
+}
+.mapa-container .info-container .sombra .button-on {
+    top: 30px;
+    background-color: var(--plomo);
+    border: 2px solid var(--plomo);
+
+}
 
 
 
