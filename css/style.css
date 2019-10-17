@@ -122,6 +122,7 @@
 .header-container .texto-header {
    color: white;
    margin: auto;
+   padding: 0px 20px;
 }
 .header-container .texto-header h2{
     background-color: #000;
@@ -439,9 +440,22 @@
     top: 30px;
     background-color: var(--plomo);
     border: 2px solid var(--plomo);
-
 }
 
 
-
+@media screen and (max-width: 750px) {
+    .galeria-container {
+        flex-direction: column-reverse;
+    }
+    .galeria-container .galeria {
+        margin-bottom: 50px;
+        width: 80%;
+    }
+    .galeria-container .texto {
+        width: 80%;
+    }
+    .separador .texto-container {
+        font-size: .7em;
+    }
+}
 

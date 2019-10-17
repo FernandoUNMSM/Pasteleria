@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/fullpage.css" />
+  <link rel="stylesheet" href="../css/form.css" />
+  <title>Fullpage</title>
+</head>
+
+<body>
+  <div id="fullpage">
+    <section class="section s1">
+      <h1>Personaliza tu Pastel</h1>
+    </section>
+    <section class="section s2">
+      <h1>Bizcocho</h1>
+      <div class="content">
+        <div class="description">
+          <p>
+            Elige el tipo de bizcocho que deseas
+          </p>
+          <form action="">
+            <select name="" id="opciones">
+              <option value="0"></option>
+              <!-- option[value="$"]*5 -->
+              <option value="1">Vainilla</option>
+              <option value="2">Chocolate</option>
+              <option value="3">Red Velvet</option>
+              <option value="4">Marmoleado</option>
+            </select>
+          </form>
+        </div>
+        <div class="figure" id="biscocho">
+          <img src="../img/bizcochos.jpg" alt="" class="biscocho">
+        </div>
+      </div>
+    </section>
+    <section class="section s3">
+      <h1>Relleno</h1>
+      <div class="content">
+        <div class="description">
+          <p>
+            Elige el tipo de relleno que deseas
+          </p>
+          <form action="">
+            <select name="" id="opciones">
+              <option value="0"></option>
+              <!-- option[value="$"]*5 -->
+              <option value="1">Manjarblanco</option>
+              <option value="2">Fodge</option>
+              <option value="3">Mermelada</option>
+            </select>
+          </form>
+        </div>
+        <div class="figure" id="biscocho">
+        </div>
+      </div>
+    </section>
+    <section class="section s4">
+      <h1>Page4</h1>
+    </section>
+    <section class="section s4">
+      <h1>Page5</h1>
+    </section>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+  <script src="../js/fullpage.min.js"></script>
+  <script src="../js/form.js"></script>
+</body>
+
+</html>
